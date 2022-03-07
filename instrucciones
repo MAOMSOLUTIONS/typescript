@@ -1,0 +1,196 @@
+npm init --yes
+
+npm install -g typescript
+
+tsc --init
+
+npm i express mongoose morgan helmet cors compression
+
+
+TYPES
+
+npm install @types/node @types/mongoose @types/express nodemon typescript -D
+
+npm install @types/morgan -D
+npm install @types/helmet -D
+
+
+
+
+1.- Installar
+
+2.- Crear clase
+
+3.- Ejecutar código
+    tsc
+
+4.- ejecutar server
+    node build/server.js
+
+5.- automatizar el server
+    en package.json
+
+     "scripts": {
+        "ts": "tsc -w"
+    },
+
+    ejecuta npm run ts
+ 
+6.- automatizar el servidor
+  "scripts": {
+    "ts": "tsc -w",
+    "dev": "nodemon ./build/server.js"
+
+  },
+
+    ejecuta npm run dev
+
+
+7  Para producción
+    "start": "tsc&&node ./build/server.js"
+
+8.- nuestra primera rest
+
+en 
+    routes(){
+        //ROUTES
+        this.app.get('/',(req, res) => 
+            res.send('Bienvenidos')
+        )
+    }
+
+    config(){
+        //routes
+        this.routes();
+    }
+
+
+
+9.- moverlo a otro archivos
+
+creamos una carpeta de  
+src/routes
+
+creamos un archivo
+indexRoutes.ts
+
+
+--------------------------------------------------------
+Para mongo DB
+
+importar
+
+inicializar mongo db
+
+npm install mongoose
+
+
+------------------------------------------------------------------------------------------------
+Agregar otros middlewares
+
+agregar los types
+
+npm i --save-dev @types/compression
+npm i --save-dev @types/cors
+
+---------------------------
+Agregar el tema de json
+
+
+--------------------------
+continuar con las rutas
+
+crear un archivo PostsRoutes.js
+configurar las rutas 
+    get
+    posts
+    update
+    delete
+
+--------------------------
+models de mongodb
+
+models
+    Post.ts
+
+-------------------------
+configuración
+post  create
+
+en postman
+{
+    "test": "esto es un ejemplo"
+}
+
+-------------------------
+configurando el body
+
+en postman
+{
+    "title": "Mi primer post",
+    "url": "URL",
+    "content": "URL",
+    "image": "https://www.pexels.com/es-es/foto/ligero-ciudad-carretera-trafico-11310113/"
+}
+
+
+
+---------------
+ahora con una URL
+
+http://localhost:3000/api/posts/url
+
+
+
+----------------
+UPDATE
+
+postman
+http://localhost:3000/api/posts/url
+
+
+{
+    "title": "Mi primer post modificado",
+    "url": "URL",
+    "content": "URL modficado",
+    "image": "https://www.pexels.com/es-es/foto/ligero-ciudad-carretera-trafico-11310113/"
+}
+
+
+----------------
+DELETE
+
+
+postman
+http://localhost:3000/api/posts/url
+
+
+
+
+--------------------------------------
+--------------------------------------
+user routes
+
+1:26:44
+
+
+--------------------------------
+jwt
+
+
+
+
+----------------------
+tsnode-dev
+
+Consumir otra API 
+
+
+
+    "start": "tsc&&node ./build/server.js"
+    "dev": "nodemon ./build/server.js",
+
+17:23
+
+
+
